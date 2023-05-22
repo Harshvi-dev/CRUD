@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- internal file -->
+  
+  <link rel="stylesheet" href="style.css">
+  <!-- bootstrap -->  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body>
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5"  style="background-color: rgb(43, 42, 42);">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Edit Form</h3>
+              <form action="list.html" method="get">
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="text" id="name" class="form-control form-control-lg" />
+                      <label class="form-label" for="Name">Name</label>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="email" id="email" class="form-control form-control-lg" />
+                      <label class="form-label" for="email">Email</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 d-flex align-items-center">
+  
+                    <div class="form-outline datepicker w-100">
+                      <input type="time" class="form-control form-control-lg" id="AppointmentTime" />
+                      <label for="AppointmentTime" class="form-label">Appointment Time</label>
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <h6 class="mb-2 pb-1">Payment Method: </h6>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="payment" id="paytm"
+                        value="paytm" />
+                      <label class="form-check-label" for="paytm">paytm</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="payment" id="Gpay"
+                        value="gpay" />
+                      <label class="form-check-label" for="Gpay">G pay</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="payment" id="otherpayment"
+                        value="other" />
+                      <label class="form-check-label" for="otherpayment">Other</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="range">
+                      <input type="range" class="form-range" id="age"  min="0" max="100" value="0" oninput="document.querySelector('#counter').innerHTML = this.value"/><b id="counter">0</b>
+                    </div>
+                    <label class="form-label" for="customRange1">Age</label>
+                </div>
+                  <div class="col-md-6 mb-4 pb-2">
+  
+                    <div class="form-outline">
+                      <input type="tel" id="phone" class="form-control form-control-lg" />
+                      <label class="form-label" for="phoneNumber">Phone Number</label>
+                    </div>
+  
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="phoneNumber">Pick Your Photo</label>
+                      <input type="file" id="photo" class="form-control form-control-lg" />
+                      <b id="photoLable">image</b>
+                      
+                    </div>
+  
+                  </div>
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label" for="lastName">Hobby :</label>
+                        <div class="form-outline" id="check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Dancing" id="dance" name="dance"/>
+                                <label class="form-check-label" for="flexCheckDefault">Dancing</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="reading" id="reading" name="read"/>
+                                <label class="form-check-label" for="flexCheckDefault">Reading</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="traveling" id="traveling" name="travel" />
+                                <label class="form-check-label" for="flexCheckDefault">Traveling</label>
+                            </div>
+                        </div>
+      
+                      </div>
+              </div>
+
+                <div class="row">
+                    
+                  <div class="col-12">
+                    <label class="form-label select-label">Favorite color</label>
+                    <select class="select form-control-lg" id="color">
+                      <option value=" " selected>Select Your Color Preferance</option>
+                      <option value="blue">blue</option>
+                      <option value="black">black</option>
+                      <option value="green">green</option>
+                      <option value="pink">pink</option>
+                    </select>
+                  </div> 
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="password" class="form-control form-control-lg" />
+                      <label class="form-label" for="email">password</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 pt-2">
+                  <input class="btn btn-primary btn-lg" type="submit" value="EDIT" id="edit"/>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<script src="editScript.js"></script>
+</body>
+</html>
